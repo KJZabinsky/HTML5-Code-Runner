@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<style>
+      h1 {
+        text-align: center;
+        color: red;
+        text-shadow: 0 0 5px #fff, 0 0 10px #e60073;
+      }
+    </style>
+        <style>
+      .textarea1 {
+        width: 50%;
+        height: 10px;
+        font-size: 16px;
+        font-family: Arial;
+        padding: 10px;
+        border-radius: 5px;
+        border: 3px solid #293437;
+        resize: none;
+      }
+    </style>
+<style>
+      body {
+        background: #293437;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        font-family: 'Astloch';
+      }
+      .text {
+        color: red;
+        font-family: 'Astloch', sans-serif;
+        font-size: 20px;
+        transition: 0.5s ease;
+        text-align: center;
+      }
+      .text2 {
+        color: #93E5BE;
+        font-family: 'Astloch', sans-serif;
+        font-size: 30px;
+        transition: 0.5s ease;
+        text-align: center;
+      }
+      .text3 {
+        color: #93E5BE;
+        font-family: 'Astloch', sans-serif;
+        font-size: 40px;
+        transition: 0.5s ease;
+        text-align: center;
+      }
+      div {
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      @keyframes fly {
+        0% { transform: translate(0px,0px) rotate(0deg); }
+        25% { transform: translate(0px,0px) rotate(20deg); }
+        50% { transform: translate(0px,0px) rotate(-20deg); }
+        75% { transform: translate(0px 0px) rotate(0deg); }
+        100% { transform: translate(0px,0px) rotate(0deg); }
+      }
+      @keyframes down {
+        0% { transform: translate(0px,0px) rotate(0deg); }
+        25% { transform: translate(0px,0px) rotate(0deg); }
+        50% { transform: translate(0px,0px) rotate(0deg); }
+        75% { transform: translate(0px 0px) rotate(0deg); }
+        100% { transform: translate(0px,0px) rotate(0deg); }
+      }
+      @media only screen and (max-width: 768px) {
+        body {
+          margin-left: 5%;
+          margin-right: 5%;
+        }
+      }
+    </style>
+    <style>
+      body {
+        text-align: center;
+      }
+      
+      h1 {
+        font-size: 2em;
+        margin-top: 20px;
+      }
+      
+      p {
+        font-size: 1.2em;
+      }
+      
+      textarea {
+        width: 80%;
+        height: 100px;
+        font-size: 1.2em;
+        padding: 10px;
+        margin-bottom: 10px;
+      }
+      
+      input[type="number"] {
+        font-size: 1.2em;
+        padding: 5px;
+        width: 20%;
+        margin-bottom: 10px;
+      }
+      
+      button {
+        font-size: 1.2em;
+        padding: 10px 20px;
+        margin-right: 10px;
+      }
+      
+      #output {
+        width: 80%;
+        height: 100px;
+        font-size: 1.2em;
+        padding: 10px;
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+<html>
+  <head>
+    <title>Preview Textarea</title>
+    <script>
+      function preview() {
+        var content = document.getElementById("content").value;
+        var previewWindow = window.open("", "Preview", "");
+        previewWindow.document.write("<html><head><title>Preview</title></head><body><pre>" + content + "</pre></body></html>");
+        previewWindow.document.close();
+      }
+    </script>
+  </head>
+  <body>
+  <div>
+  <h1>HTML QUICK CODE<h1>
+    <textarea id="content" rows="6" cols="60"></textarea>
+    <br>
+    <button onclick="preview()">Preview</button>
+  </body>
+</html>
